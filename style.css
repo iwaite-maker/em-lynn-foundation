@@ -118,8 +118,40 @@ p {
 }
 
 .hero-inner {
-  max-width: 760px;
+  max-width: 1080px;
   margin: 0 auto;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3rem;
+  align-items: center;
+  text-align: left;
+}
+
+.hero-text .subhead {
+  margin: 0;
+}
+
+.hero-photo {
+  margin: 0;
+}
+
+.hero-photo img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 10px 34px rgba(46, 63, 82, 0.2);
+  display: block;
+}
+
+.hero-photo .photo-credit {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--blue-deep);
+  text-align: center;
 }
 
 .eyebrow {
@@ -201,6 +233,32 @@ p {
   margin: 0;
 }
 
+.lives-photo {
+  max-width: 360px;
+  margin: 2.75rem auto 0;
+  text-align: center;
+}
+
+.lives-photo img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 8px 26px rgba(46, 63, 82, 0.16);
+  display: block;
+}
+
+.lives-photo figcaption p {
+  margin: 0.7rem 0 0;
+  font-size: 0.85rem;
+  color: var(--navy-soft);
+}
+
+.lives-photo .photo-credit {
+  margin-top: 0.25rem;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--blue-deep);
+}
+
 /* Meeting */
 .meeting {
   background: var(--white);
@@ -255,7 +313,33 @@ blockquote cite {
 .timeline-section h2 {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-photo-banner {
+  max-width: 620px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.section-photo-banner img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 8px 26px rgba(46, 63, 82, 0.16);
+  display: block;
+}
+
+.section-photo-banner figcaption p {
+  margin: 0.7rem 0 0;
+  font-size: 0.85rem;
+  color: var(--navy-soft);
+}
+
+.section-photo-banner .photo-credit {
+  margin-top: 0.25rem;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--blue-deep);
 }
 
 .timeline {
@@ -320,6 +404,43 @@ blockquote cite {
   color: var(--navy-soft);
 }
 
+.vision-forward .vision-grid {
+  display: flex;
+  align-items: center;
+  gap: 2.75rem;
+  text-align: left;
+}
+
+.vision-forward .vision-grid .vision-text {
+  flex: 1;
+  text-align: left;
+}
+
+.vision-forward .vision-grid .vision-text h2 {
+  text-align: left;
+}
+
+.vision-photo {
+  flex: 0 0 210px;
+  margin: 0;
+}
+
+.vision-photo img {
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 8px 26px rgba(46, 63, 82, 0.16);
+  display: block;
+}
+
+.vision-photo .photo-credit {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  font-style: italic;
+  color: var(--blue-deep);
+  text-align: center;
+}
+
 /* Good works */
 .good-works {
   background: var(--blue-pale);
@@ -343,6 +464,15 @@ blockquote cite {
   padding: 1.75rem;
   border-radius: 4px;
   border-top: 3px solid var(--pink);
+}
+
+.work-card .work-photo {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1.1rem;
+  display: block;
 }
 
 .work-card h3 {
@@ -572,6 +702,32 @@ blockquote cite {
 
   .site-nav a {
     font-size: 0.75rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-photo {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .vision-forward .vision-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .vision-forward .vision-grid .vision-text,
+  .vision-forward .vision-grid .vision-text h2 {
+    text-align: center;
+  }
+
+  .vision-photo {
+    flex: 0 0 auto;
+    max-width: 200px;
+    margin: 0 auto;
   }
 }
 
