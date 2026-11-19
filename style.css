@@ -1,11 +1,6 @@
 :root {
-  /* Palette priority: White, Burgundy, Beige, Gold */
+  /* Palette: white and burgundy only, in tints and shades */
   --white: #ffffff;
-  --beige-pale: #f7efe0;
-  --beige: #ecd9b3;
-  --beige-deep: #d8bf8a;
-  --gold: #c9a876;
-  --gold-deep: #a9824c;
   --burgundy-pale: #f2dde4;
   --burgundy-light: #c96a86;
   --burgundy: #a8365a;
@@ -48,7 +43,7 @@ h2::after {
   display: block;
   width: 72px;
   height: 4px;
-  background: var(--gold);
+  background: var(--burgundy);
   margin: 1.1rem auto 0;
 }
 
@@ -77,7 +72,7 @@ p {
   top: 0;
   z-index: 10;
   background: var(--burgundy-black);
-  border-bottom: 4px solid var(--gold);
+  border-bottom: 4px solid var(--burgundy-light);
 }
 
 .header-inner {
@@ -106,7 +101,7 @@ p {
 }
 
 .site-nav a {
-  color: var(--beige-pale);
+  color: var(--white);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 700;
@@ -118,8 +113,8 @@ p {
 }
 
 .site-nav a:hover {
-  color: var(--gold);
-  border-color: var(--gold);
+  color: var(--burgundy-light);
+  border-color: var(--burgundy-light);
 }
 
 /* Hero */
@@ -199,9 +194,9 @@ p {
 
 /* Intro */
 .intro {
-  background: var(--beige-pale);
+  background: var(--white);
   text-align: center;
-  border-bottom: 1px solid var(--beige);
+  border-bottom: 1px solid var(--burgundy-pale);
 }
 
 .intro .narrow {
@@ -238,7 +233,7 @@ p {
   background: var(--white);
   border-radius: 2px;
   padding: 2.25rem;
-  border-top: 6px solid var(--gold);
+  border-top: 6px solid var(--burgundy-light);
 }
 
 .life-card:nth-child(2) {
@@ -348,7 +343,7 @@ blockquote cite {
 }
 
 .timeline-section h2::after {
-  background: var(--gold);
+  background: var(--burgundy-light);
 }
 
 .section-photo-banner {
@@ -381,11 +376,11 @@ blockquote cite {
 }
 
 .timeline-section .section-photo-banner figcaption p {
-  color: var(--beige-pale);
+  color: var(--white);
 }
 
 .timeline-section .section-photo-banner .photo-credit {
-  color: var(--gold);
+  color: var(--burgundy-pale);
 }
 
 .timeline {
@@ -393,7 +388,7 @@ blockquote cite {
   margin: 0 auto;
   padding: 0;
   max-width: 760px;
-  border-left: 4px solid var(--gold);
+  border-left: 4px solid var(--burgundy-light);
 }
 
 .timeline li {
@@ -429,13 +424,13 @@ blockquote cite {
   display: block;
   font-family: var(--font-heading);
   font-weight: 900;
-  color: var(--gold);
+  color: var(--white);
   font-size: 1.4rem;
   margin-bottom: 0.3rem;
 }
 
 .timeline p {
-  color: var(--beige-pale);
+  color: var(--burgundy-pale);
   font-weight: 500;
   font-size: 1.05rem;
   margin: 0;
@@ -506,7 +501,7 @@ blockquote cite {
 
 /* Good works */
 .good-works {
-  background: var(--beige-pale);
+  background: var(--burgundy-pale);
 }
 
 .good-works h2 {
@@ -549,7 +544,7 @@ blockquote cite {
   justify-content: center;
   gap: 0.6rem;
   background: linear-gradient(135deg, var(--burgundy-black) 0%, var(--burgundy) 100%);
-  color: var(--gold);
+  color: var(--white);
 }
 
 .work-emblem svg {
@@ -563,7 +558,7 @@ blockquote cite {
   font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--beige-pale);
+  color: var(--white);
 }
 
 .work-card h3 {
@@ -613,7 +608,7 @@ blockquote cite {
 
 .honors li {
   padding: 1.1rem 0;
-  border-bottom: 2px solid var(--beige-pale);
+  border-bottom: 2px solid var(--burgundy-pale);
   color: var(--ink);
   font-weight: 600;
   font-size: 1.1rem;
@@ -683,7 +678,7 @@ blockquote cite {
   border-radius: 2px;
   overflow: hidden;
   background: var(--white);
-  border: 1px solid var(--beige);
+  border: 1px solid var(--burgundy-pale);
   box-shadow: 0 2px 10px rgba(69, 18, 31, 0.15);
   display: flex;
   flex-direction: column;
@@ -741,11 +736,11 @@ blockquote cite {
   background: var(--burgundy-black);
   text-align: center;
   padding: 2.25rem 1.5rem;
-  border-top: 4px solid var(--gold);
+  border-top: 4px solid var(--burgundy-light);
 }
 
 .site-footer p {
-  color: var(--beige-pale);
+  color: var(--white);
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.03em;
