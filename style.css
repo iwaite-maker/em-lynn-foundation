@@ -1,15 +1,13 @@
 :root {
-  /* Palette: white and burgundy only, in tints and shades */
+  /* Palette: dark burgundy, white, and true gold only */
   --white: #ffffff;
-  --burgundy-pale: #f2dde4;
-  --burgundy-light: #c96a86;
-  --burgundy: #a8365a;
-  --burgundy-deep: #7d1f3d;
-  --burgundy-black: #45121f;
-  --ink: #3a1420;
-  --ink-soft: #6e3f4c;
-  --font-heading: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --burgundy: #45121f;
+  --burgundy-deep: #2c0a14;
+  --burgundy-soft: #7a4455;
+  --gold: #d4af37;
+  --gold-deep: #8f6b17;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Lora', Georgia, serif;
 }
 
 * {
@@ -23,28 +21,19 @@ html {
 body {
   margin: 0;
   font-family: var(--font-sans);
-  font-weight: 500;
-  color: var(--ink);
+  font-weight: 400;
+  color: var(--burgundy);
   background: var(--white);
-  line-height: 1.65;
+  line-height: 1.7;
   font-size: 19px;
 }
 
 h1, h2, h3 {
   font-family: var(--font-heading);
-  font-weight: 800;
-  color: var(--ink);
+  font-weight: 700;
+  color: var(--burgundy);
   margin: 0;
   line-height: 1.2;
-}
-
-h2::after {
-  content: "";
-  display: block;
-  width: 72px;
-  height: 4px;
-  background: var(--burgundy);
-  margin: 1.1rem auto 0;
 }
 
 p {
@@ -71,8 +60,8 @@ p {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: var(--burgundy-black);
-  border-bottom: 4px solid var(--burgundy-light);
+  background: var(--burgundy);
+  border-bottom: 3px solid var(--gold);
 }
 
 .header-inner {
@@ -88,8 +77,8 @@ p {
 
 .brand {
   font-family: var(--font-heading);
-  font-weight: 900;
-  font-size: 1.35rem;
+  font-weight: 700;
+  font-size: 1.4rem;
   letter-spacing: 0.01em;
   color: var(--white);
 }
@@ -103,9 +92,10 @@ p {
 .site-nav a {
   color: var(--white);
   text-decoration: none;
+  font-family: var(--font-heading);
   font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   border-bottom: 2px solid transparent;
   padding-bottom: 2px;
@@ -113,13 +103,13 @@ p {
 }
 
 .site-nav a:hover {
-  color: var(--burgundy-light);
-  border-color: var(--burgundy-light);
+  color: var(--gold);
+  border-color: var(--gold);
 }
 
 /* Hero */
 .hero {
-  background: linear-gradient(160deg, var(--white) 0%, var(--burgundy-pale) 100%);
+  background: var(--white);
   text-align: center;
   padding: 6rem 1.5rem 5rem;
 }
@@ -148,7 +138,7 @@ p {
 .hero-photo img {
   width: 100%;
   border-radius: 2px;
-  border: 4px solid var(--white);
+  border: 4px solid var(--gold);
   box-shadow: 0 10px 34px rgba(69, 18, 31, 0.3);
   display: block;
 }
@@ -157,46 +147,41 @@ p {
   display: block;
   margin-top: 0.7rem;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   font-style: italic;
-  color: var(--ink-soft);
+  color: var(--burgundy-soft);
   text-align: center;
 }
 
 .eyebrow {
   font-family: var(--font-heading);
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--burgundy);
+  color: var(--gold-deep);
   margin: 0 0 1.25rem 0;
 }
 
 .hero h1 {
   font-size: clamp(2.8rem, 6vw, 4.5rem);
-  font-weight: 900;
+  font-weight: 800;
   line-height: 1.1;
   margin-bottom: 1.4rem;
 }
 
-.hero h1::after {
-  margin: 1.1rem 0 0;
-}
-
 .subhead {
   font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--ink-soft);
+  font-weight: 500;
+  color: var(--burgundy-soft);
   max-width: 600px;
   margin: 0 auto;
 }
 
 /* Intro */
 .intro {
-  background: var(--white);
+  background: var(--burgundy);
   text-align: center;
-  border-bottom: 1px solid var(--burgundy-pale);
 }
 
 .intro .narrow {
@@ -206,15 +191,17 @@ p {
 }
 
 .intro p {
-  font-size: 1.4rem;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.5rem;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--white);
   margin: 0;
 }
 
 /* Two lives */
 .two-lives {
-  background: var(--burgundy-pale);
+  background: var(--white);
 }
 
 .two-lives h2 {
@@ -233,7 +220,8 @@ p {
   background: var(--white);
   border-radius: 2px;
   padding: 2.25rem;
-  border-top: 6px solid var(--burgundy-light);
+  border-top: 4px solid var(--gold);
+  box-shadow: 0 2px 16px rgba(69, 18, 31, 0.1);
 }
 
 .life-card:nth-child(2) {
@@ -243,12 +231,12 @@ p {
 .life-card h3 {
   font-size: 1.6rem;
   margin-bottom: 0.9rem;
-  color: var(--burgundy-deep);
+  color: var(--burgundy);
 }
 
 .life-card p {
-  color: var(--ink);
-  font-weight: 500;
+  color: var(--burgundy);
+  font-weight: 400;
   margin: 0;
 }
 
@@ -261,7 +249,7 @@ p {
 .lives-photo img {
   width: 100%;
   border-radius: 2px;
-  border: 4px solid var(--white);
+  border: 4px solid var(--gold);
   box-shadow: 0 8px 26px rgba(69, 18, 31, 0.25);
   display: block;
 }
@@ -269,16 +257,16 @@ p {
 .lives-photo figcaption p {
   margin: 0.8rem 0 0;
   font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--ink);
+  font-weight: 500;
+  color: var(--burgundy);
 }
 
 .lives-photo .photo-credit {
   margin-top: 0.3rem;
   font-size: 0.85rem;
   font-style: italic;
-  font-weight: 600;
-  color: var(--ink-soft);
+  font-weight: 500;
+  color: var(--burgundy-soft);
 }
 
 /* Meeting */
@@ -297,8 +285,8 @@ p {
 }
 
 .meeting p {
-  color: var(--ink);
-  font-weight: 500;
+  color: var(--burgundy);
+  font-weight: 400;
 }
 
 /* Blockquotes */
@@ -306,10 +294,11 @@ blockquote {
   margin: 2.5rem auto 0;
   max-width: 660px;
   padding: 1.9rem 2.1rem;
-  background: var(--burgundy-pale);
-  border-left: 6px solid var(--burgundy);
+  background: var(--white);
+  border-left: 4px solid var(--gold);
   border-radius: 2px;
   text-align: left;
+  box-shadow: 0 2px 16px rgba(69, 18, 31, 0.1);
 }
 
 blockquote p {
@@ -317,22 +306,22 @@ blockquote p {
   font-style: italic;
   font-weight: 700;
   font-size: 1.3rem;
-  color: var(--burgundy-black);
+  color: var(--burgundy);
   margin: 0 0 0.7rem 0;
 }
 
 blockquote cite {
   font-family: var(--font-sans);
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.95rem;
-  color: var(--ink-soft);
+  color: var(--burgundy-soft);
   letter-spacing: 0.02em;
 }
 
 /* Timeline */
 .timeline-section {
-  background: var(--burgundy-black);
+  background: var(--burgundy);
 }
 
 .timeline-section h2 {
@@ -340,10 +329,6 @@ blockquote cite {
   font-size: 2.6rem;
   margin-bottom: 2.75rem;
   color: var(--white);
-}
-
-.timeline-section h2::after {
-  background: var(--burgundy-light);
 }
 
 .section-photo-banner {
@@ -355,7 +340,7 @@ blockquote cite {
 .section-photo-banner img {
   width: 100%;
   border-radius: 2px;
-  border: 4px solid var(--white);
+  border: 4px solid var(--gold);
   box-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
   display: block;
 }
@@ -363,16 +348,16 @@ blockquote cite {
 .section-photo-banner figcaption p {
   margin: 0.8rem 0 0;
   font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--ink);
+  font-weight: 500;
+  color: var(--burgundy);
 }
 
 .section-photo-banner .photo-credit {
   margin-top: 0.3rem;
   font-size: 0.85rem;
   font-style: italic;
-  font-weight: 600;
-  color: var(--ink-soft);
+  font-weight: 500;
+  color: var(--burgundy-soft);
 }
 
 .timeline-section .section-photo-banner figcaption p {
@@ -380,7 +365,7 @@ blockquote cite {
 }
 
 .timeline-section .section-photo-banner .photo-credit {
-  color: var(--burgundy-pale);
+  color: var(--gold);
 }
 
 .timeline {
@@ -388,7 +373,7 @@ blockquote cite {
   margin: 0 auto;
   padding: 0;
   max-width: 760px;
-  border-left: 4px solid var(--burgundy-light);
+  border-left: 3px solid var(--gold);
 }
 
 .timeline li {
@@ -411,27 +396,27 @@ blockquote cite {
 .timeline li::before {
   content: "";
   position: absolute;
-  left: -9px;
+  left: -8px;
   top: 4px;
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
-  background: var(--burgundy-light);
+  background: var(--gold);
   border: 3px solid var(--white);
 }
 
 .timeline .year {
   display: block;
   font-family: var(--font-heading);
-  font-weight: 900;
-  color: var(--white);
+  font-weight: 800;
+  color: var(--gold);
   font-size: 1.4rem;
   margin-bottom: 0.3rem;
 }
 
 .timeline p {
-  color: var(--burgundy-pale);
-  font-weight: 500;
+  color: var(--white);
+  font-weight: 400;
   font-size: 1.05rem;
   margin: 0;
 }
@@ -452,8 +437,8 @@ blockquote cite {
 }
 
 .vision-forward p {
-  color: var(--ink);
-  font-weight: 500;
+  color: var(--burgundy);
+  font-weight: 400;
 }
 
 .vision-forward .vision-grid {
@@ -472,10 +457,6 @@ blockquote cite {
   text-align: left;
 }
 
-.vision-forward .vision-grid .vision-text h2::after {
-  margin-left: 0;
-}
-
 .vision-photo {
   flex: 0 0 220px;
   margin: 0;
@@ -484,7 +465,7 @@ blockquote cite {
 .vision-photo img {
   width: 100%;
   border-radius: 2px;
-  border: 4px solid var(--white);
+  border: 4px solid var(--gold);
   box-shadow: 0 8px 26px rgba(69, 18, 31, 0.25);
   display: block;
 }
@@ -493,21 +474,30 @@ blockquote cite {
   display: block;
   margin-top: 0.55rem;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   font-style: italic;
-  color: var(--ink-soft);
+  color: var(--burgundy-soft);
   text-align: center;
 }
 
 /* Good works */
 .good-works {
-  background: var(--burgundy-pale);
+  background: var(--burgundy);
 }
 
 .good-works h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 2.75rem;
+  color: var(--white);
+}
+
+.good-works .section-photo-banner figcaption p {
+  color: var(--white);
+}
+
+.good-works .section-photo-banner .photo-credit {
+  color: var(--gold);
 }
 
 .works-grid {
@@ -521,7 +511,7 @@ blockquote cite {
   background: var(--white);
   padding: 1.9rem;
   border-radius: 2px;
-  border-top: 6px solid var(--burgundy);
+  border-top: 4px solid var(--gold);
 }
 
 .work-card .work-photo {
@@ -543,8 +533,9 @@ blockquote cite {
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  background: linear-gradient(135deg, var(--burgundy-black) 0%, var(--burgundy) 100%);
-  color: var(--white);
+  background: var(--burgundy);
+  color: var(--gold);
+  border: 1px solid var(--gold);
 }
 
 .work-emblem svg {
@@ -554,7 +545,7 @@ blockquote cite {
 
 .work-emblem span {
   font-family: var(--font-heading);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -564,19 +555,20 @@ blockquote cite {
 .work-card h3 {
   font-size: 1.3rem;
   margin-bottom: 0.8rem;
-  color: var(--burgundy-deep);
+  color: var(--burgundy);
 }
 
 .work-gift {
   font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--ink);
+  font-weight: 400;
+  color: var(--burgundy);
 }
 
 .work-result {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--burgundy);
+  font-style: italic;
+  color: var(--gold-deep);
   margin: 0;
 }
 
@@ -608,9 +600,9 @@ blockquote cite {
 
 .honors li {
   padding: 1.1rem 0;
-  border-bottom: 2px solid var(--burgundy-pale);
-  color: var(--ink);
-  font-weight: 600;
+  border-bottom: 1px solid var(--burgundy-soft);
+  color: var(--burgundy);
+  font-weight: 400;
   font-size: 1.1rem;
 }
 
@@ -625,19 +617,19 @@ blockquote cite {
 
 /* Own words */
 .own-words {
-  background: var(--burgundy-pale);
+  background: var(--burgundy);
 }
 
 .own-words h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 2.25rem;
+  color: var(--white);
 }
 
 .own-words blockquote {
   margin-left: 0;
   margin-right: 0;
-  background: var(--white);
 }
 
 .own-words blockquote + blockquote {
@@ -652,17 +644,14 @@ blockquote cite {
 .gallery h2 {
   text-align: center;
   font-size: 2.6rem;
-  margin-bottom: 0.6rem;
-}
-
-.gallery h2::after {
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.9rem;
 }
 
 .gallery-note {
   text-align: center;
-  color: var(--ink-soft);
-  font-weight: 600;
+  color: var(--burgundy-soft);
+  font-weight: 400;
+  font-style: italic;
   font-size: 1.05rem;
   margin-bottom: 2.75rem;
 }
@@ -678,7 +667,7 @@ blockquote cite {
   border-radius: 2px;
   overflow: hidden;
   background: var(--white);
-  border: 1px solid var(--burgundy-pale);
+  border: 1px solid var(--gold);
   box-shadow: 0 2px 10px rgba(69, 18, 31, 0.15);
   display: flex;
   flex-direction: column;
@@ -698,21 +687,21 @@ blockquote cite {
 .gallery-photo figcaption p {
   margin: 0;
   font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--ink);
+  font-weight: 500;
+  color: var(--burgundy);
 }
 
 .gallery-photo .photo-credit {
   margin-top: 0.4rem;
   font-size: 0.8rem;
   font-style: italic;
-  font-weight: 600;
-  color: var(--ink-soft);
+  font-weight: 500;
+  color: var(--burgundy-soft);
 }
 
 /* Closing */
 .closing {
-  background: linear-gradient(160deg, var(--burgundy-pale) 0%, var(--white) 100%);
+  background: var(--burgundy);
   text-align: center;
 }
 
@@ -723,24 +712,26 @@ blockquote cite {
 .closing h2 {
   font-size: 2.6rem;
   margin-bottom: 1.4rem;
+  color: var(--white);
 }
 
 .closing p {
-  color: var(--ink);
-  font-weight: 600;
+  color: var(--white);
+  font-weight: 400;
   font-size: 1.3rem;
 }
 
 /* Footer */
 .site-footer {
-  background: var(--burgundy-black);
+  background: var(--burgundy-deep);
   text-align: center;
   padding: 2.25rem 1.5rem;
-  border-top: 4px solid var(--burgundy-light);
+  border-top: 3px solid var(--gold);
 }
 
 .site-footer p {
   color: var(--white);
+  font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.03em;
@@ -784,10 +775,6 @@ blockquote cite {
   .vision-forward .vision-grid .vision-text,
   .vision-forward .vision-grid .vision-text h2 {
     text-align: center;
-  }
-
-  .vision-forward .vision-grid .vision-text h2::after {
-    margin-left: auto;
   }
 
   .vision-photo {
