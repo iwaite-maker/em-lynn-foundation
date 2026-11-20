@@ -113,7 +113,6 @@ p {
   background: var(--burgundy);
   text-align: center;
   padding: 0;
-  overflow: hidden;
 }
 
 .hero-inner {
@@ -123,45 +122,40 @@ p {
 }
 
 .hero-grid {
-  position: relative;
-  min-height: 620px;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  min-height: 0;
   text-align: left;
+  padding: 4.5rem 0;
 }
 
 .hero-text {
-  position: relative;
-  z-index: 2;
-  max-width: 560px;
-  padding: 3rem 0;
+  max-width: 540px;
 }
 
 .hero-photo {
-  position: absolute;
-  z-index: 1;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: auto;
+  position: relative;
   margin: 0;
-  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 4px solid var(--gold);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
 }
 
 .hero-photo img {
-  height: 100%;
-  width: auto;
+  width: 100%;
+  height: auto;
   display: block;
-  filter:
-    drop-shadow(0 0 18px rgba(212, 175, 55, 0.55))
-    drop-shadow(0 0 42px rgba(212, 175, 55, 0.35))
-    drop-shadow(0 12px 30px rgba(0, 0, 0, 0.4));
 }
 
 .hero-photo .photo-credit {
   position: absolute;
-  bottom: 0.7rem;
-  right: 0.3rem;
+  bottom: 0.6rem;
+  right: 0.6rem;
   left: auto;
-  max-width: 280px;
+  max-width: 240px;
   font-size: 0.72rem;
   font-weight: 500;
   font-style: italic;
@@ -763,38 +757,20 @@ blockquote cite {
   }
 
   .hero-grid {
-    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 2.5rem 0 2rem;
     text-align: center;
   }
 
   .hero-text {
-    position: static;
     max-width: none;
-    padding: 2.5rem 0 1.5rem;
+    padding: 0 0 1.5rem;
   }
 
   .hero-photo {
-    position: static;
-    max-width: 300px;
-    height: auto;
-    width: auto;
-    margin: 0 auto 1.5rem;
-  }
-
-  .hero-photo img {
-    height: auto;
-    max-height: 380px;
-    width: 100%;
-  }
-
-  .hero-photo .photo-credit {
-    position: static;
-    display: block;
-    background: none;
-    color: var(--burgundy-soft);
-    text-align: center;
-    max-width: none;
-    padding: 0.5rem 0 0;
+    max-width: 340px;
+    margin: 0 auto;
   }
 
   .vision-forward .vision-grid {
